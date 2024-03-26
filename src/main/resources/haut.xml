@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+
+
+>
+
+
+<!--        <bean id="student" class="org.haut.bean.Student">&ndash;&gt;-->
+<!--        <constructor-arg name="id" value="211210200110"></constructor-arg>-->
+<!--        <constructor-arg name="name" value="李俊"></constructor-arg>-->
+<!--        <constructor-arg name="grade" ref="grade"></constructor-arg>-->
+<!--        </bean>-->
+<!--         <bean id="grade" class="org.haut.bean.Grade">-->
+<!--        <constructor-arg name="gradeID" value="6"></constructor-arg>-->
+<!--        <constructor-arg name="gradeName" value="⼤三下"></constructor-arg>-->
+<!--        </bean>-->
+
+
+<!--    <bean id="student" class="org.haut.bean.Student">-->
+<!--        <property name="id" value="211210200110"></property>-->
+<!--        <property name="name" value="李俊"></property>-->
+<!--        <property name="grade" ref="grade"></property>-->
+<!--    </bean>-->
+<!--    <bean id="grade" class="org.haut.bean.Grade">-->
+<!--        <property name="gradeID" value="6"></property>-->
+<!--        <property name="gradeName" value="⼤三下"></property>-->
+<!--    </bean>-->
+
+<!--    <bean id="person" class="org.haut.bean.Person">-->
+<!--    &lt;!&ndash;普通值注⼊，value：具体属性值&ndash;&gt;-->
+<!--    <property name="name" value="李俊"/>-->
+<!--    &lt;!&ndash;数组注⼊&ndash;&gt;-->
+<!--    <property name="arr">-->
+<!--        <array>-->
+<!--            <value>AAA</value>-->
+<!--            <value>BBB</value>-->
+<!--            <value>CCC</value>-->
+<!--        </array>-->
+<!--    </property>-->
+<!--    &lt;!&ndash;List注⼊&ndash;&gt;-->
+<!--    <property name="myList">-->
+<!--        <list>-->
+<!--            <value>111</value>-->
+<!--            <value>222</value>-->
+<!--            <value>333</value>-->
+<!--        </list>-->
+<!--    </property>-->
+<!--    &lt;!&ndash;Map注⼊&ndash;&gt;-->
+<!--    <property name="myMap">-->
+<!--        <map>-->
+<!--            <entry key="aaa" value="aaaa"></entry>-->
+<!--            <entry key="bbb" value="bbbb"></entry>-->
+<!--            <entry key="ccc" value="cccc"></entry>-->
+<!--        </map>-->
+<!--    </property>-->
+<!--    &lt;!&ndash;Set注⼊&ndash;&gt;-->
+<!--    <property name="mySet">-->
+<!--        <set>-->
+<!--            <value>111</value>-->
+<!--            <value>222</value>-->
+<!--            <value>333</value>-->
+<!--        </set>-->
+<!--    </property>-->
+<!--        <property name="myPro">-->
+<!--            <props>-->
+<!--                <prop key="aaa">aaaa</prop>-->
+<!--                <prop key="bbb">bbbb</prop>-->
+<!--                <prop key="ccc">cccc</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="student" class="org.haut.bean.Student" p:id="⼩李" p:name="dept" p:grade-ref="Grade"></bean>-->
+<!--    <bean id="Grade" class="org.haut.bean.Grade" p:gradeID="1111" p:gradeName="技术部"></bean>-->
+
+<!--    <bean id="student" class="org.haut.bean.Student" c:id="⼩李" c:name="dept" c:grade-ref="Grade"></bean>-->
+<!--    <bean id="Grade" class="org.haut.bean.Grade" c:gradeID="1111" c:gradeName="技术部"></bean>-->
+
+<!--    <bean id="student" class="org.haut.bean.Student"  autowire="byType">-->
+<!--        <property name="id" value="11"></property>-->
+<!--        <property name="name" value="⼩郭"></property>-->
+<!--    </bean>-->
+<!--    <bean id="grade1" class="org.haut.bean.Grade">-->
+<!--        <property name="gradeID" value="6"></property>-->
+<!--        <property name="gradeName" value="⼤三下"></property>-->
+<!--    </bean>-->
+
+<!--    <context:annotation-config/>-->
+<!--    <bean id="cat1" class="org.haut.bean.Cat" >-->
+<!--        <property name="id" value="111"/>-->
+<!--        <property name="name" value="jerry"/>-->
+<!--    </bean>-->
+<!--    <bean id="dog1" class="org.haut.bean.Dog">-->
+<!--        <property name="id" value="222"/>-->
+<!--        <property name="name" value="tom"/>-->
+<!--    </bean>-->
+<!--    <bean id="animal" class="org.haut.bean.Animal"/>-->
+
+
+<!--    <context:annotation-config/>-->
+<!--    <bean id="cat1" class="org.haut.bean.Cat" >-->
+<!--        <property name="id" value="111"/>-->
+<!--        <property name="name" value="jerry"/>-->
+<!--    </bean>-->
+<!--    <bean id="dog1" class="org.haut.bean.Dog">-->
+<!--        <property name="id" value="222"/>-->
+<!--        <property name="name" value="tom"/>-->
+<!--    </bean>-->
+<!--    <bean id="cat2" class="org.haut.bean.Cat" >-->
+<!--        <property name="id" value="333"/>-->
+<!--        <property name="name" value="jerry"/>-->
+<!--    </bean>-->
+<!--    <bean id="dog2" class="org.haut.bean.Dog">-->
+<!--        <property name="id" value="444"/>-->
+<!--        <property name="name" value="tom"/>-->
+<!--    </bean>-->
+<!--    <bean id="animal" class="org.haut.bean.Animal"/>-->
+
+
+    <context:component-scan base-package="org.haut.bean"></context:component-scan>
+    <bean id="cat1" class="org.haut.bean.Cat" >
+        <property name="id" value="111"/>
+        <property name="name" value="jerry"/>
+    </bean>
+    <bean id="dog1" class="org.haut.bean.Dog">
+        <property name="id" value="222"/>
+        <property name="name" value="tom"/>
+    </bean>
+    <bean id="animal" class="org.haut.bean.Animal"/>
+
+
+
+
+</beans>
